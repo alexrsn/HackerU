@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:textSize="60sp"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:gravity="end"
+        android:id="@+id/txtResult"
+        android:scrollHorizontally="true"
+        android:lines="1"
+        android:text=""/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="C"
+            android:onClick="btnCPressed"
+            android:text="C" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="+/-"
+            android:onClick="btnPlusMinusPressed"
+            android:text="+/-" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="%"
+            android:onClick="btnPercentPressed"
+            android:text="%" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_orange_dark"
+            android:textSize="30sp"
+            android:tag="÷"
+            android:onClick="btnOperatorPressed"
+            android:text="÷" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="7"
+            android:onClick="btnNumberPressed"
+            android:text="7" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="8"
+            android:onClick="btnNumberPressed"
+            android:text="8" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="9"
+            android:onClick="btnNumberPressed"
+            android:text="9" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_orange_dark"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            android:tag="x"
+            android:onClick="btnOperatorPressed"
+            android:text="x" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="4"
+            android:onClick="btnNumberPressed"
+            android:text="4" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="5"
+            android:onClick="btnNumberPressed"
+            android:text="5" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="6"
+            android:onClick="btnNumberPressed"
+            android:text="6" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_orange_dark"
+            android:textSize="30sp"
+            android:tag="-"
+            android:onClick="btnOperatorPressed"
+            android:text="-" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="1"
+            android:onClick="btnNumberPressed"
+            android:text="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="2"
+            android:onClick="btnNumberPressed"
+            android:text="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="3"
+            android:onClick="btnNumberPressed"
+            android:text="3" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_orange_dark"
+            android:textSize="30sp"
+            android:tag="+"
+            android:onClick="btnOperatorPressed"
+            android:text="+" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="2"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="0"
+            android:onClick="btnNumberPressed"
+            android:text="0" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textSize="30sp"
+            android:tag="."
+            android:onClick="btnPointPressed"
+            android:text="." />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_orange_dark"
+            android:textSize="30sp"
+            android:tag="="
+            android:onClick="btnEqualsPressed"
+            android:text="=" />
+    </LinearLayout>
+</LinearLayout>

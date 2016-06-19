@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Http_Server_With_JSON:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Http_Server_With_JSON_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Http_Server_With_JSON/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Http_Server_With_JSON" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$USER_HOME$/Downloads/java-json.jar" />
+          <element id="file-copy" path="D:/- = Software = -/- = Software Programing = -/- = Android Dev = -/java-json.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
