@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MyService.class);
         bindService(intent, connection, BIND_AUTO_CREATE);
         startService(intent);
+
     }
 
     public void btnStartStopService(View view) {
