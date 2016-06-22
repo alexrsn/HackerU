@@ -19,10 +19,11 @@ public class MainActivity extends AppCompatActivity {
             //Log.d("Alex", "row inserted:" + rowId);
             //rowId = dbAdapter.addLocation(System.currentTimeMillis(), 32.434, 40.164);
             //Log.d("Alex", "row inserted:" + rowId);
-            Cursor cursor = dbAdapter.getLocations();
-            while (cursor.moveToNext()) {
-                Location location = new Location(cursor.getLong(0), cursor.getDouble(1), cursor.getDouble(2));
-                Log.d("Alex", "location: " + location);
+            try (Cursor cursor = dbAdapter.getLocations()) {//Cursor extends Closable
+                while (cursor.moveToNext()) {
+                    Location location = new Location(cursor.getLong(0), cursor.getDouble(1), cursor.getDouble(2));
+                    Log.d("Alex", "location: " + location);
+                }
             }
         }
     }
