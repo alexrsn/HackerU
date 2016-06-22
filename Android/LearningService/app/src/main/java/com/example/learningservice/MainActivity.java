@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
 
     private EditText txtAddToCounter;
     private MyService myService;
-    boolean bound = false;
+    private boolean bound = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

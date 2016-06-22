@@ -80,7 +80,7 @@ public class MyService extends Service {
                 public void run() {
                     while(go){
                         counter++;
-                        Log.d("Elad", "thread is running " + MyService.this.counter);
+                        Log.d("Alex", "thread is running " + MyService.this.counter);
                         try {
                             Thread.sleep(1000);
                         } catch (InterruptedException e) {
