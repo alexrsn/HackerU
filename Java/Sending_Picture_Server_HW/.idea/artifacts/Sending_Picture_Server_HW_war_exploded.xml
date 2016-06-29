@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Sending_Picture_Server_HW:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Sending_Picture_Server_HW_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Sending_Picture_Server_HW/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Sending_Picture_Server_HW" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -7,7 +7,7 @@
     <ImageView
         android:layout_width="400dp"
         android:layout_height="200dp"
-        android:id="@+id/currentPhoto"/>
+        android:id="@+id/serverPhoto"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,5 +25,9 @@
         android:onClick="btnUploadPhoto"
         android:text="upload photo" />
 
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:onClick="btnExit"/>
 </LinearLayout>

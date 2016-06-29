@@ -1,4 +1,4 @@
-package com.example.capturingpicturesusingcamera;
+package com.example.sendingpictureclienthw;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -21,7 +21,9 @@ public class PictureRunnable implements Runnable {
 
     @Override
     public void run() {
-        Bitmap bitmap = BitmapFactory.decodeFile(serverPhotoFile.toString());
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inSampleSize = 4;
+        Bitmap bitmap = BitmapFactory.decodeFile(serverPhotoFile.toString(),options);
         serverPhoto.setImageBitmap(bitmap);
     }
 }

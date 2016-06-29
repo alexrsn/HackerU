@@ -26,13 +26,13 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if(inputStream != null)
+            if (inputStream != null)
                 try {
                     inputStream.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            if(outputStream != null)
+            if (outputStream != null)
                 try {
                     outputStream.close();
                 } catch (IOException e) {
