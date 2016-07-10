@@ -7,7 +7,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);a
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MyButton myButton = (MyButton) findViewById(R.id.myButton1);
+        myButton.setText("Click Me");
+        myButton.setTextSize(120);
     }
 }

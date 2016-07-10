@@ -1,9 +1,11 @@
 package com.example.androidcustomview;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.SweepGradient;
 import android.util.AttributeSet;
@@ -42,7 +44,7 @@ public class MyButton extends Button {
         textPaint.setAntiAlias(true);
         textPaint.setTextSize(16);
         textPaint.setColor(0xFF000000);
-        setPadding(15, 15, 15, 15);
+        setPadding(15, 15, 15, 1);
         paint = new Paint();
         paint.setAntiAlias(true);
         paint.setStrokeWidth(4);
@@ -60,7 +62,7 @@ public class MyButton extends Button {
 
     @Override
     public void setTextSize(float size) {
-        super.setTextSize(size);
+        textPaint.setTextSize(size);
         requestLayout();
         invalidate();
     }
@@ -83,7 +85,7 @@ public class MyButton extends Button {
         if (specMode == MeasureSpec.EXACTLY) {
             result = specSize;
         } else {
-            result = (int) textPaint.measureText(text) + getPaddingLeft() + getPaddingRight();
+            result = (int) (textPaint.measureText(text) + getPaddingLeft() + getPaddingRight());
             if (specMode == MeasureSpec.AT_MOST) {
                 result = Math.min(result, specSize);
             }
@@ -105,5 +107,37 @@ public class MyButton extends Button {
             }
         }
         return result;
+    }
+
+    private void drawArcs(Canvas canvas, RectF oval, boolean useCenter, Paint paint) {
+        canvas.drawArc(oval, start, sweep, useCenter, paint);
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        matrix.setRotate(rotate, this.getMeasuredWidth() / 2, this.getMeasuredHeight() / 2);
+        shader.setLocalMatrix(matrix);
+        rotate += 3;
+        if (rotate >= 360) {
+            rotate = 0;
+        }
+        RectF drawRect = new RectF();
+        drawRect.set(this.getWidth() - textPaint.measureText(text),
+                (this.getHeight() - textPaint.getTextSize()) / 2,
+                textPaint.measureText(text),
+                this.getHeight() - (this.getHeight() - textPaint.getTextSize()) / 2);
+        drawArcs(canvas, drawRect, false, paint);
+        sweep += SWEEP_INC;
+        if (sweep > 360) {
+            sweep -= 360;
+            start += START_INC;
+            if (start >= 360) {
+                start -= 360;
+            }
+        }
+        if (sweep > 180) {
+            canvas.drawText(text, getPaddingLeft(), getPaddingTop() - ascent, textPaint);
+        }
+        invalidate();
     }
 }

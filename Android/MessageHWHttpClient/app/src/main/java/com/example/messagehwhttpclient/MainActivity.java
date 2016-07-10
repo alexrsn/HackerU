@@ -23,6 +23,8 @@ import java.util.TimerTask;
 
 public class MainActivity extends Activity {
 
+    //public static final String SERVER_IP = "http://10.0.2.2:8080/MessageServlet";
+    public static final String SERVER_IP = "http://104.197.57.209:8080/Message_Server_war/MessageServlet";
     private EditText txtMessageToSend;
     private TextView txtCurrentMessage;
     private Button btnSendMessage;
@@ -95,7 +97,7 @@ public class MainActivity extends Activity {
         boolean inputStreamClosed = false, outputStreamClosed = false, urlConnectionClosed = false;
 
         try {
-            url = new URL("http://10.0.2.2:8080/MessageServlet");
+            url = new URL(SERVER_IP);
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("POST");
             urlConnection.setDoOutput(true);
